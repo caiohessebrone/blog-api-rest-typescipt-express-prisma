@@ -3,10 +3,11 @@ import express from 'express';
 
 const prisma = new PrismaClient();
 const app = express();
+const port = process.env.PORT || 3332;
 
 app.use(express.json());
 
-app.listen(3332, () =>
+app.listen(port, () =>
     console.log('Rest Api server ready at: http://localhost:3332')
 )
 
